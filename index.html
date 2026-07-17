@@ -3,60 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>QR Generator & Scanner</title>
+    <title>Generator & Scanner Barcode</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>📱 QR Playground</h1>
+        <h1>Playground</h1>
 
         <!-- Navigasi Tab -->
         <div class="tabs">
-            <button class="tab-btn active" onclick="openTab('generate')">✨ Buat QR</button>
-            <button class="tab-btn" onclick="openTab('scan')">📷 Scan QR</button>
+            <button class="tab-btn active" onclick="openTab('generate')">Create Barcode</button>
+            <button class="tab-btn" onclick="openTab('scan')">Scan Barcode</button>
         </div>
 
-        <!-- TAB 1: GENERATE QR -->
+        <!-- GENERATE  -->
         <div id="tab-generate" class="tab-content active">
             <div class="card">
-                <label for="qr-text">Masukkan Teks / URL:</label>
-                <input type="text" id="qr-text" placeholder="https://github.com/username" value="Hello World!">
-                <button id="generate-btn" class="btn-primary">🚀 Generate QR</button>
+                <label for="qr-text">Fill Teks / URL:</label>
+                <input type="text" id="qr-text" placeholder="https://github.com/ngedream" value="Hello World!">
+                <button id="generate-btn" class="btn-primary">Generate Barcode Now!</button>
                 
                 <div id="qr-result">
                     <div id="qrcode-container"></div>
                 </div>
                 
-                <button id="download-btn" class="btn-secondary" style="display: none;">⬇️ Download PNG</button>
-                <p id="history-info">📜 Riwayat: <span id="history-count">0</span> QR pernah dibuat</p>
+                <button id="download-btn" class="btn-secondary" style="display: none;">Download PNG</button>
+                <p id="history-info">History: <span id="history-count">500</span> Barcode</p>
             </div>
         </div>
 
-        <!-- TAB 2: SCAN QR -->
+        <!-- SCAN -->
         <div id="tab-scan" class="tab-content">
             <div class="card">
-                <p style="font-size:14px; color:#4a5568;">Klik tombol di bawah, izinkan akses kamera, lalu arahkan ke QR Code.</p>
-                <button id="scan-btn" class="btn-primary">📷 Nyalakan Kamera</button>
-                <button id="stop-scan-btn" class="btn-secondary" style="display: none;">⏹ Stop Scan</button>
+                <p style="font-size:14px; color:#4a5568;"></p>
+                <button id="scan-btn" class="btn-primary"> Turn on your camera</button>
+                <button id="stop-scan-btn" class="btn-secondary" style="display: none;">Stop scan</button>
                 
                 <div id="scanner-container">
                     <div id="reader" style="width:100%; max-width:400px; margin: 10px auto;"></div>
                 </div>
                 
                 <div id="scan-result">
-                    <h3 style="font-size:16px; margin-top:16px;">📄 Hasil Scan:</h3>
-                    <p id="decoded-text" class="result-box">Belum ada scan...</p>
+                    <h3 style="font-size:16px; margin-top:16px;">Scanner:</h3>
+                    <p id="decoded-text" class="result-box">History scanning...</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Library QR Code (Generate) -->
+    <!-- Library Barcode Code (Generate) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <!-- Library QR Code Scanner -->
+    <!-- Library Barcode Code (Scanner) -->
     <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
-    <!-- File JS Kita -->
+    <!-- File js -->
     <script src="script.js"></script>
 </body>
 </html>
